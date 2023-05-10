@@ -1,0 +1,1 @@
+This is a folder to start with Makefile and Cmake
