@@ -1,0 +1,7 @@
+@startuml
+    Start
+    :Compensate FOC ;
+    :Compensate R-coil;
+    :Test_ADC_Read;
+   Stop
+@enduml
