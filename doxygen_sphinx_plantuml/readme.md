@@ -22,7 +22,17 @@
     4:*.puml alt+d to preview plantuml
 ## *C* in VScode
     1: install MSYS2 https://www.msys2.org/
-    2: **pacman -S --needed base-devel mingw-w64-x86_64-toolchain**
+    2: install gcc
+        2.1 install all tools 
+            2.1.1**pacman -S --needed base-devel mingw-w64-x86_64-toolchain**
+        2.2 install only *gcc* and *make* and *gdb*
+            2.2.1 **pacman -S mingw-w64-x86_64-gcc** 
+            2.2.2 **pacman -S mingw-w64-x86_64-make**
+            2.2.2 **pacman -S mingw-w64-x86_64-gdb**
+    3: pacman -S mingw-w64-x86_64-cmake install Cmake
+    4: pacman -S mingw-w64-x86_64-ninja Install Ninja
+    5: pacman -R mingw-w64-x86_64-cmake Remove Cmake
+    6: pacman -R mingw-w64-x86_64-ninja Remove ninja
 
 ```plantuml
 @startuml
