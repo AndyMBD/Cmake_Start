@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Map=tutorial.map")
+project(tutorial)
+set(src_dir "./src")
+add_executable(tutorial 
+                        ${src_dir}/main.c
+                        ${src_dir}/c_dll/c_dll.c
+                        ${src_dir}/c_dll/c_dll.h
+                        ${src_dir}/math/math_utils.c
+                        ${src_dir}/math/math_utils.h
+                        )

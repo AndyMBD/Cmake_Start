@@ -11,3 +11,4 @@ tree C:\D\C\Test_006 /f > C:\D\C\Test_006\result.txt
 ```
 ```
 ## python call C under CMake_002
+## Cmake generate map file
