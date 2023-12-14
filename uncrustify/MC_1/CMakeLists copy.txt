@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.26)
+project(Motor_Control_test)
+
+set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+
+set(SRC1_LIST 
+            #${SRC_DIR}/Unit_Test/MC_Stepping_test.c
+            #${SRC_DIR}/Unit_Test/MC_Stepping_test.h
+            #${SRC_DIR}/Unit_Test/types.h
+            #${SRC_DIR}/math_utils.h
+            #${SRC_DIR}/math_utils.c
+            #${SRC_DIR}/Unit_Test/el_types_ACM0_Keil.h
+            ${SRC_DIR}/Unit_Test/unit_Test_MC_Stepping_main.c)
+#src_dir="./Unit_Test"
+# Create the executable
+add_executable(${PROJECT_NAME}
+                 ${SRC1_LIST})
+AUX_SOURCE_DIRECTORY(${SRC_DIR}/ SRC_LIST)
+message(SRC_DIR------${SRC_DIR})
+message(SRC_LIST-----${SRC_LIST})
+#message(SRC1_LIST----${SRC1_LIST}"\n")

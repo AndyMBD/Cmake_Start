@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 3.26)
+project(Smart_Actuator)
+
+#SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+set(UNCRUSTIFY_DIR ${ROOT_DIR}/uncrustify)
+
+set(UNCRUSTIFY_TARGET_NAME uncrustify)
+
+
+add_subdirectory(${ROOT_DIR}/Motor_Control_1)
+add_subdirectory(${ROOT_DIR}/Motor_Control_2)
+
+function(add_custom_make_target UNCRUSTIFY EXTRA_ARGS)
+    add_custom_target(${UNCRUSTIFY_TARGET_NAME}
+                    uncrustify -c ${UNCRUSTIFY_CFG} --replace --no-backup -l C ${TOP_UNCRUSTIFY_SRC}
+                    )
+endfunction()
+#WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} COMMAND
+#$(HIDE_CMD)uncrustify -c $(U_CONFIG) --replace --no-backup -l C $(UNCRUSTIFY_FILES)
+#add_subdirectory(./Motor_Control/)
+message(UNCRUSTIFY_DIR = ${UNCRUSTIFY_DIR})
+
+AUX_SOURCE_DIRECTORY(${ROOT_DIR}/uncrustify DIR_SRCSS)
+
+#target_sources(A2  ${UNCRUSTIFY_DIR})
+
+#PRIVATE
+message(DIR_SRCSS = ${DIR_SRCSS})
+message(SRC12345_LIST = ${SRC1_LIST})
+add_custom_make_target(UNCRUSTIFY "")
+message("My HEADER_GLOB_SRC: -------------" ${TOP_UNCRUSTIFY_SRC})
+
+
