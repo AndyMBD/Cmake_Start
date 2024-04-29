@@ -4,9 +4,9 @@ project(C_Learn C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_subdirectory(./Cmake_001)
+# add_subdirectory(./Cmake_001)
 # add_subdirectory(./Cmake_002)
-add_subdirectory(./Cmake_003)
+# add_subdirectory(./Cmake_003)
 
 # add_subdirectory(./uncrustify)
 

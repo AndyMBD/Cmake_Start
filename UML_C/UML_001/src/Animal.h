@@ -7,6 +7,8 @@ typedef struct {
     int weight;
 } Animal;
 
+
+
 // 构造函数声明
 void Animal_Ctor(Animal *this, int age, int weight);
 

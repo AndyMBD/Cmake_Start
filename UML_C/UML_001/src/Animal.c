@@ -1,6 +1,6 @@
 #include "Animal.h"
-
-// 父类构造函数实现
+// struct human_t Human;
+/* Animal */
 void Animal_Ctor(Animal *this, int age, int weight)
 {
     this->age = age;
@@ -16,3 +16,5 @@ int Animal_GetWeight(Animal *this)
 {
     return this->weight;
 }
+
+
