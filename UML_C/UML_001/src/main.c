@@ -2,7 +2,7 @@
 #include "Animal.h"
 #include "Human.h"
 // #include "Dog.h"
-// 封装
+/* fengzhuang */
 int main()
 {
     // 在栈上创建一个对象
