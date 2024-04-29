@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.26)
 
 project(C_Learn C)
 
@@ -11,4 +11,3 @@ set(CMAKE_C_STANDARD 11)
 # add_subdirectory(./uncrustify)
 
 add_subdirectory(./UML_C/UML_001)
-
