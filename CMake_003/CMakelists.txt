@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Map=tutorial.map")
-project(tutorial)
+project(CMake_003)
 set(src_dir "./src")
-add_executable(tutorial 
+add_executable(CMake_003 
                         ${src_dir}/main.c
                         ${src_dir}/c_dll/c_dll.c
                         ${src_dir}/c_dll/c_dll.h

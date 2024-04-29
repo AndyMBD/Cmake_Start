@@ -5,7 +5,7 @@
 # CMake最低版本要求
 cmake_minimum_required(VERSION 3.26)
 # 项目名称
-project(Template C)
+project(CMake_002 C)
 
 #-------------------------------------------------------------------------------
 # project setting
@@ -89,6 +89,6 @@ add_subdirectory(./src/math)
 # 如果路径包含空格，可以使用双引号将它括起来
 include_directories("${PROJECT_SOURCE_DIR}/math/inc")
 # 指定生成目标
-add_executable(main .${DIR_SRCS})
+add_executable(CMake_002 .${DIR_SRCS})
 # 添加链接库
-target_link_libraries(main mathLib)
+target_link_libraries(CMake_002 mathLib)
