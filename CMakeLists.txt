@@ -10,7 +10,10 @@ set(CMAKE_C_STANDARD 11)
 
 # add_subdirectory(./uncrustify)
 
-# add_subdirectory(./UML_C/UML_001)
+# Encapsulating
+add_subdirectory(./UML_C/UML_001)
+# Inheritance
 # add_subdirectory(./UML_C/UML_002)
-add_subdirectory(./UML_C/UML_003)
+# Polymorphism
+# add_subdirectory(./UML_C/UML_003)
 # add_subdirectory(./UML_C/Struct_Function_Pointer)

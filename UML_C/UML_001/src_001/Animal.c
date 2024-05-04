@@ -1,7 +1,7 @@
 #include "Animal.h"
 // struct human_t Human;
 /* Animal */
-void Animal_Ctor(Animal *this, int age, int weight)
+void Animal_Creator(Animal *this, int age, int weight)
 {
     this->age = age;
     this->weight = weight;

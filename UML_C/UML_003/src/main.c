@@ -1,8 +1,9 @@
 #include "stdio.h"
 #include "Shape.h"
-/* polymorphism 多态*/
+/* Polymorphism 多态*/
 
-int main() {
+int main() 
+{
     Circle circle = {
         .base = { .draw = drawCircle },
         .x = 1,

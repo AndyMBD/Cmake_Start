@@ -10,7 +10,7 @@ typedef struct {
 
 
 // 构造函数声明
-void Animal_Ctor(Animal *this, int age, int weight);
+void Animal_Creator(Animal *this, int age, int weight);
 
 // 获取父类属性声明
 int Animal_GetAge(Animal *this);

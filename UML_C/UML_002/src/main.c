@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Human.h"
-/* inheritance 继承*/
+/* Inheritance 继承*/
 
 int main() {
     Person_t* cperson = Create_Person(18, 'w', "lucy");
