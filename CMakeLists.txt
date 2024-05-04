@@ -10,4 +10,7 @@ set(CMAKE_C_STANDARD 11)
 
 # add_subdirectory(./uncrustify)
 
-add_subdirectory(./UML_C/UML_001)
+# add_subdirectory(./UML_C/UML_001)
+# add_subdirectory(./UML_C/UML_002)
+add_subdirectory(./UML_C/UML_003)
+# add_subdirectory(./UML_C/Struct_Function_Pointer)
