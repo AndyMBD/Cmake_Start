@@ -9,7 +9,7 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(Encapsulate_04
                ./src/main.c
-               ./src/Animal.c
-               ./src/Animal.h
+               ./src/oop.c
+               ./src/oop.h
                )
 
