@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(UML_003 C)
+project(Encapsulate_02 C)
 
 set(CMAKE_C_STANDARD 11)
 
 # include_directories(./src/math)
 # include_directories(./src/app)
 
-add_executable(UML_003 
+add_executable(Encapsulate_02
                ./src/main.c
-               ./src/Shape.c
-               ./src/Shape.h
+               ./src/Animal.c
+               ./src/Animal.h
                )
 
