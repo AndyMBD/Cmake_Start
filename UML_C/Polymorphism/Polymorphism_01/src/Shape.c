@@ -2,12 +2,26 @@
 #include "stdio.h"
 
 
-void drawCircle(void* shape) {
-    Circle* circle = (Circle*)shape;
-    printf("Circle at (%d,%d) with radius %d\n", circle->x, circle->y, circle->radius);
+void draw_Triangle( void * Shape)
+{
+    /* point type convert from void to Triangle_t */
+    Triangle_t *Triangle =(Triangle_t*) Shape;
+    printf("---------------------\n");
+    printf("This is Draw Triangle\n");
+    printf("Triangle x1:%d\n",Triangle->x1);
+    printf("Triangle x1:%d\n",Triangle->x2);
+    printf("Triangle x1:%d\n",Triangle->x3);
+    printf("---------------------\n");
+
 }
 
-void drawLine(void* shape) {
-    Line* line = (Line*)shape;
-    printf("Line from (%d,%d) to (%d,%d)\n", line->x1, line->y1, line->x2, line->y2);
+void draw_Line(void *Shape)
+{
+    /* point type convert from void to Line_t */
+    Line_t *line=(Line_t*)Shape;
+    printf("---------------------\n");
+    printf("This is draw Line\n");
+    printf("Line x1:%d\n",line->x1);
+    printf("Line X2:%d\n",line->x2);
+    printf("---------------------\n");
 }

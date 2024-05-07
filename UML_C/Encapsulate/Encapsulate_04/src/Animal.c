@@ -31,10 +31,10 @@ Animal_t * Animal_Create(void)
 
     Animal_t *Animal_Temp;
     struct  animal_vtbl *Animal_vtbl_Temp;
-    /* 动态分配内存 */
+    /* dynamic allocate memory */
     Animal_Temp=(Animal_t *)malloc(sizeof(Animal_Temp));
     Animal_vtbl_Temp=(struct  animal_vtbl *)malloc(sizeof(Animal_vtbl_Temp));    
-    /* 清零 */
+    /* clear */
     memset(Animal_Temp,0,sizeof(Animal_Temp));
     // struct animal_vtbl *Animal_vtbl_Temp;
     /* Function connect to Data */
@@ -44,6 +44,7 @@ Animal_t * Animal_Create(void)
     Animal_vtbl_Temp->Set_Sex   =   Set_Sex;
     Animal_Temp->vptr=Animal_vtbl_Temp;
 
+    
     // Animal_vtbl_p->Get_Age   =   Get_Age;
     // Animal_vtbl_p->Get_Sex   =   Get_Sex;
     // Animal_vtbl_p->Set_Age   =   Set_Age;

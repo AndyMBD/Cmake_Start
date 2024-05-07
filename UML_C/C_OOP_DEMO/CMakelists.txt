@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.12)
+project(C_oop C)
+set(CMAKE_C_STANDARD 11)
+
+set(SRC_DIR ./src)
+set(INC_DIR ./inc)
+file(GLOB SRC_LIST ${SRC_DIR}/*.c)
+file(GLOB INC_LIST ${INC_DIR}/*.h)
+# file(GLOB USER_LIBS_PATH ${SRC_DIR}/*.c)
+include_directories(${INC_DIR})
+# output
+
+# message(${SRC_LIST})
+# message(${INC_LIST})
+# message(${USER_LIBS_PATH})
+add_executable(C_oop
+                ${SRC_LIST}
+                ${INC_LIST}
+                )
