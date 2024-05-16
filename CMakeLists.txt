@@ -23,6 +23,8 @@ add_subdirectory(./UML_C/Polymorphism/Polymorphism_01)
 add_subdirectory(./UML_C/Polymorphism/Polymorphism_02)
 add_subdirectory(./UML_C/Polymorphism/Polymorphism_03)
 add_subdirectory(./UML_C/Polymorphism/Polymorphism_04)
+add_subdirectory(./UML_C/Callback/Callback_01)
+add_subdirectory(./UML_C/Callback/Callback_02)
 
 # C_OOP_DEMO
 add_subdirectory(./UML_C/C_OOP_DEMO)
