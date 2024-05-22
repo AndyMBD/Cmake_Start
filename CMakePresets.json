@@ -1,0 +1,110 @@
+{
+  "version": 4,
+  "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 23,
+      "patch": 0
+  },
+  "configurePresets":[
+  {
+    "name": "default",
+    "hidden": true,
+    "generator": "Ninja Multi-Config",
+    "binaryDir": "${sourceDir}/build/${presetName}",
+    "cacheVariables": {
+                      "GCC_COMPILER_ROOT_DIR": "C:\\msys64\\ucrt64\\"
+                      }
+  },
+  {
+    "name": "Design_Pattern_For_Embedded_System_In_C_SRC",
+    "hidden": true,
+    "cacheVariables": {
+                      "PROJECT_SRC_PATH": "UML_C/Design_Pattern_For_Embedded_System_In_C"
+                      }
+  },
+  {
+    "name": "Design_Pattern_For_Embedded_System_In_C",
+    "displayName": "Design_Pattern_For_Embedded_System_In_C_ucrt64_GCC",
+    "inherits": [ "default",  "Design_Pattern_For_Embedded_System_In_C_SRC" ],
+    "description": "compilers: ucrt64 gcc.exe, CXX g++.exe"
+  },
+  {
+    "name": "Cmake_SRC",
+    "hidden": true,
+    "cacheVariables": {
+                      "PROJECT_SRC_PATH": "Cmake"
+                      }
+  },
+  {
+    "name": "Cmake_Test",
+    "displayName": "Cmake_Test",
+    "inherits": [ "default",  "Cmake_SRC" ],
+    "description": "compilers: ucrt64 gcc.exe, CXX g++.exe"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "hidden": true
+    },
+    {
+      "name": "cfg-debug",
+      "hidden": true,
+      "configuration" : "Debug"
+    },
+    {
+      "name": "cfg-release",
+      "hidden": true,
+      "configuration" : "Release"
+    },
+    {
+      "name": "cfg-relwithdebinfo",
+      "hidden": true,
+      "configuration" : "RelWithDebInfo"
+    },
+
+    {
+      "name": "Design_Pattern_For_Embedded_System_In_C_Debug",
+      "configurePreset": "Design_Pattern_For_Embedded_System_In_C",
+      "inherits": [ "default", "cfg-debug" ],
+      "displayName": "Design_Pattern_For_Embedded_System_In_C_Debug",
+      "description": "Build 'Debug' configuration of Design_Pattern_For_Embedded_System_In_C_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "Design_Pattern_For_Embedded_System_In_C_release",
+      "configurePreset": "Design_Pattern_For_Embedded_System_In_C",
+      "inherits": [ "default", "cfg-release" ],
+      "displayName": "Design_Pattern_For_Embedded_System_In_C_release",
+      "description": "Build 'release' configuration of Design_Pattern_For_Embedded_System_In_C_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "Design_Pattern_For_Embedded_System_In_C_relwithdebinfo",
+      "configurePreset": "Design_Pattern_For_Embedded_System_In_C",
+      "inherits": [ "default", "cfg-relwithdebinfo" ],
+      "displayName": "Design_Pattern_For_Embedded_System_In_C_relwithdebinfo",
+      "description": "Build 'cfg-relwithdebinfo' configuration of Design_Pattern_For_Embedded_System_In_C_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "Cmake_Test_Debug",
+      "configurePreset": "Cmake_Test",
+      "inherits": [ "default", "cfg-debug" ],
+      "displayName": "Cmake_Test_Debug",
+      "description": "Build 'Debug' configuration of Cmake_Test_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "Cmake_Test_release",
+      "configurePreset": "Cmake_Test",
+      "inherits": [ "default", "cfg-release" ],
+      "displayName": "Cmake_Test_release",
+      "description": "Build 'release' configuration of Cmake_Test_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "Cmake_Test_relwithdebinfo",
+      "configurePreset": "Cmake_Test",
+      "inherits": [ "default", "cfg-relwithdebinfo" ],
+      "displayName": "Cmake_Test_relwithdebinfo",
+      "description": "Build 'cfg-relwithdebinfo' configuration of Cmake_Test_Debug using GCC compiler and Ninja"
+    }
+    
+  ]
+}
