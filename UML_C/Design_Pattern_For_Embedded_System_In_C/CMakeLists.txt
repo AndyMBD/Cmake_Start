@@ -5,7 +5,7 @@ add_subdirectory(./Ch_1_2_1)
 # add_subdirectory(./Ch_1_2_3)
 add_subdirectory(./Ch_1_2_4)
 # Ch1_2_5 Only a wrapper of a finate state machine not a complate runable function
-# add_subdirectory(./Ch_1_2_5)
+add_subdirectory(./Ch_1_2_5)
 add_subdirectory(./Ch_2_1_5_4_Observer_Pattern)
 add_subdirectory(./Ch_3_1)
 add_subdirectory(./Ch_3_2)

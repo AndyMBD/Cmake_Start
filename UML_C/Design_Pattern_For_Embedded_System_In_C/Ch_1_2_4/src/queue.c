@@ -65,8 +65,12 @@ Queue *Queue_Create(void)
     Queue *me = (Queue *)malloc(sizeof(Queue));
     if (me != NULL)
     {
-        Queue_Init(me, Queue_isFull, Queue_isEmpty, Queue_getSize,
-                   Queue_insert, Queue_remove);
+        Queue_Init(me,
+                   Queue_isFull,
+                   Queue_isEmpty,
+                   Queue_getSize,
+                   Queue_insert,
+                   Queue_remove);
     }
     return me;
 }

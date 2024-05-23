@@ -16,7 +16,8 @@ struct Queue
     int (*remove)(Queue *const me);
 };
 /* Constructors and destructors:*/
-void Queue_Init(Queue *const me, int (*isFullfunction)(Queue *const me),
+void Queue_Init(Queue *const me, 
+                int (*isFullfunction)(Queue *const me),
                 int (*isEmptyfunction)(Queue *const me),
                 int (*getSizefunction)(Queue *const me),
                 void (*insertfunction)(Queue *const me, int k),
