@@ -1,7 +1,7 @@
 #ifndef TIMER_MARKED_DATA_H
 #define TIMER_MARKED_DATA_H
 // #include <stdio.h>
-// #include "ECGPkg.h"
+#include "ECGPkg.h"
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "TMDQueue.h"
 #define TURN_OFF (0x00)
 #define INITIALIZE (0x61)
 #define RUN (0x69)
@@ -24,6 +25,7 @@ int main()
 {
     printf("CH_3_1_1 return %d\n",CH_3_1_1());
     CH_3_1_2();
+    TMD_Queue_Handle();
 }
 
 void emergencyShutDown(void)
@@ -79,4 +81,15 @@ void CH_3_1_2()
     printf("Motor speed %d\n", status.motorSpeed);
     printf("Color %d\n", status.LEDColor);
     printf("*---------CH3_1_2 End----------------------*\n");
+}
+void TMD_Queue_Handle()
+{
+    TMDQueue TMDQueue_t1={
+        .head=10,
+        .size=20
+    };
+    printf("*---------TMDQueue_t1 Start----------------------*\n");
+    printf("TMDQueue_t1 head %d\n", TMDQueue_t1.head);
+    printf("TMDQueue_t1 size %d\n", TMDQueue_t1.size);
+    printf("*---------TMDQueue_t1 End----------------------*\n");
 }

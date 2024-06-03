@@ -40,6 +40,32 @@
     "displayName": "Cmake_Test",
     "inherits": [ "default",  "Cmake_SRC" ],
     "description": "compilers: ucrt64 gcc.exe, CXX g++.exe"
+  },
+  {
+    "name": "UML_C_Timer_SRC",
+    "hidden": true,
+    "cacheVariables": {
+                      "PROJECT_SRC_PATH": "UML_C/Timer"
+                      }
+  },
+  {
+    "name": "UML_C_Timer",
+    "displayName": "UML_C_Timer",
+    "inherits": [ "default",  "UML_C_Timer_SRC" ],
+    "description": "compilers: ucrt64 gcc.exe, CXX g++.exe"
+    },
+  {
+    "name": "V_Learn_SRC",
+    "hidden": true,
+    "cacheVariables": {
+                      "PROJECT_SRC_PATH": "V_Learn"
+                      }
+  },
+  {
+    "name": "V_Learn",
+    "displayName": "V_Learn",
+    "inherits": [ "default",  "V_Learn_SRC" ],
+    "description": "compilers: ucrt64 gcc.exe, CXX g++.exe"
     }
   ],
   "buildPresets": [
@@ -104,6 +130,48 @@
       "inherits": [ "default", "cfg-relwithdebinfo" ],
       "displayName": "Cmake_Test_relwithdebinfo",
       "description": "Build 'cfg-relwithdebinfo' configuration of Cmake_Test_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "UML_C_Timer_Debug",
+      "configurePreset": "UML_C_Timer",
+      "inherits": [ "default", "cfg-debug" ],
+      "displayName": "UML_C_Timer_Debug",
+      "description": "Build 'Debug' configuration of UML_C_Timer_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "UML_C_Timer_release",
+      "configurePreset": "UML_C_Timer",
+      "inherits": [ "default", "cfg-release" ],
+      "displayName": "UML_C_Timer_release",
+      "description": "Build 'release' configuration of UML_C_Timer_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "UML_C_Timer_relwithdebinfo",
+      "configurePreset": "UML_C_Timer",
+      "inherits": [ "default", "cfg-relwithdebinfo" ],
+      "displayName": "UML_C_Timer_relwithdebinfo",
+      "description": "Build 'cfg-relwithdebinfo' configuration of UML_C_Timer_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "V_Learn_Debug",
+      "configurePreset": "V_Learn_Timer",
+      "inherits": [ "default", "cfg-debug" ],
+      "displayName": "UML_C_Timer_Debug",
+      "description": "Build 'Debug' configuration of UML_C_Timer_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "V_Learn_release",
+      "configurePreset": "V_Learn",
+      "inherits": [ "default", "cfg-release" ],
+      "displayName": "V_Learn_release",
+      "description": "Build 'release' configuration of V_Learn_Debug using GCC compiler and Ninja"
+    },
+    {
+      "name": "V_Learn_relwithdebinfo",
+      "configurePreset": "V_Learn",
+      "inherits": [ "default", "cfg-relwithdebinfo" ],
+      "displayName": "V_Learn_relwithdebinfo",
+      "description": "Build 'cfg-relwithdebinfo' configuration of V_Learn_Debug using GCC compiler and Ninja"
     }
     
   ]

@@ -45,7 +45,7 @@ struct TimeMarkedData TMDQueue_remove(TMDQueue *const me, int index)
     TimeMarkedData tmd;
     tmd.timeInterval = -1; /* sentinel values */
     tmd.dataValue = -9999;
-    if (!TMDQueue_isEmpty(me) && (index >= 0) && (index < QU\UE_SIZE) && (index < me->size))
+    if (!TMDQueue_isEmpty(me) && (index >= 0) && (index < QUEUE_SIZE) && (index < me->size))
     {
         tmd = me->buffer[index];
     }

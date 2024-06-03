@@ -20,4 +20,8 @@ tree C:\D\C\Test_006 /f > C:\D\C\Test_006\result.txt
 ## UML use C
 ### classes in C https://www.pvv.ntnu.no/~hakonhal/main.cgi/c/classes/
 ### Design_Pattern_For_Embedded_System_In_C
+### complie generate map file
+```cmake
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Map=${PROJECT_NAME}.map")
+```
 ## TODO: Cmake generate map file

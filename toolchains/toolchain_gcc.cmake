@@ -22,6 +22,7 @@ set(CMAKE_ASM_COMPILER "${GCC_COMPILER_ROOT_DIR}/bin/gcc.exe"        CACHE STRIN
 set(CMAKE_AR           "${GCC_COMPILER_ROOT_DIR}/bin/gcc-ar.exe"     CACHE STRING "")
 set(CMAKE_NM           "${GCC_COMPILER_ROOT_DIR}/bin/gcc-nm.exe"     CACHE STRING "")
 set(CMAKE_RANLIB       "${GCC_COMPILER_ROOT_DIR}/bin/gcc-ranlib.exe" CACHE STRING "")
+# set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Map=${PROJECT_NAME}.map")
 
 set(TOOLCHAIN_INCLUDE_DIRS
     ${GCC_COMPILER_ROOT_DIR}/include
