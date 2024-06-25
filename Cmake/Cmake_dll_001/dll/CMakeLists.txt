@@ -1,0 +1,17 @@
+# 设置变量
+SET(LIBHELLO_SRC ./my_dll.h 
+                 ./my_dll.c)
+SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ../lib_out)
+set(CMAKE_CXX_VISIBILITY_PRESET )
+
+# 1st param is dll name 2nd define dll or a
+ADD_LIBRARY(my_dll SHARED ${LIBHELLO_SRC})
+# ADD_LIBRARY(my_dll STATIC ${LIBHELLO_SRC})
+INSTALL(TARGETS my_dll)
+# 为dll设置linker
+# 指定dll的生成目录，这里是：./lib_out
+SET_TARGET_PROPERTIES(my_dll PROPERTIES LINKER_LANGUAGE C
+        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
+        LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
+        OUTPUT_NAME "my_dll"
+        PREFIX "")
