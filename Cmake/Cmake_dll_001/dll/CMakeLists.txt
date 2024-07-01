@@ -1,17 +1,28 @@
-# 设置变量
-SET(LIBHELLO_SRC ./my_dll.h 
-                 ./my_dll.c)
-SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ../lib_out)
-set(CMAKE_CXX_VISIBILITY_PRESET )
+set(PROJECT_NAME my_dll)
+# Set SRC INC folder location
+set(DLL_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(DLL_INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/inc)
+# list all SRC INC file
+file(GLOB DLL_SRC_FILES 
+            "${DLL_SRC_DIR}/*.c")
+file(GLOB  DLL_INC_FILES 
+                    "${DLL_INC_DIR}/*.h")
 
-# 1st param is dll name 2nd define dll or a
-ADD_LIBRARY(my_dll SHARED ${LIBHELLO_SRC})
-# ADD_LIBRARY(my_dll STATIC ${LIBHELLO_SRC})
-INSTALL(TARGETS my_dll)
-# 为dll设置linker
-# 指定dll的生成目录，这里是：./lib_out
-SET_TARGET_PROPERTIES(my_dll PROPERTIES LINKER_LANGUAGE C
-        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
-        LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
-        OUTPUT_NAME "my_dll"
-        PREFIX "")
+# Add library add source and inc file to target
+ADD_LIBRARY(${PROJECT_NAME} SHARED 
+                        ${DLL_SRC_FILES}
+                        ${DLL_INC_FILES})
+# message("dll SRC file is  ${DLL_SRC_FILES}")
+# message("dll INC file is  ${DLL_INC_FILES}")
+# add INC file to target
+target_include_directories(${PROJECT_NAME} PUBLIC ${DLL_INC_DIR})
+# INSTALL(TARGETS ${PROJECT_NAME})
+# Set target property
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE C
+                                      RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}
+                                    #   LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}
+                                    #   ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}
+                                      # RUNTIME_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
+                                      # LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
+                                      OUTPUT_NAME "${PROJECT_NAME}"
+                                      PREFIX "")

@@ -1,10 +1,37 @@
-cmake_minimum_required(VERSION 3.16)
-project(dll_learn)
+cmake_minimum_required(VERSION 3.18)
+# 1.create a Project
+set(PROJECT_NAME "dll_learn")
+PROJECT(${PROJECT_NAME})
+# set(PROJECT_BINARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/build/bin)
+# 2. add subdirectory and include directory
+add_subdirectory(dll)
+add_subdirectory(lib)
+add_subdirectory(cJSON)
+# include_directories(${PROJECT_SOURCE_DIR}/dll/inc)
+# include_directories(${PROJECT_SOURCE_DIR}/lib/inc)
+# 2. to get all source files
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/demo demo_src)
+# 3. create a executable file
+add_executable(${PROJECT_NAME} ${demo_src})
+# 4. Set Project Properties
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-set(BUILD_SHARED_LIBS ON)
-ADD_SUBDIRECTORY(dll)
-ADD_SUBDIRECTORY(cJSON)
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES
+										RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
+# 4. Set Project Properties
+target_include_directories(${PROJECT_NAME} PUBLIC 
+											${PROJECT_SOURCE_DIR}/dll/inc)
+target_link_libraries(${PROJECT_NAME} PUBLIC 
+									  my_dll)
+                                      
+target_include_directories(${PROJECT_NAME} PUBLIC 
+											${PROJECT_SOURCE_DIR}/lib/inc)
+target_link_libraries(${PROJECT_NAME} PUBLIC 
+									 my_lib)
 
-add_executable(run_dll ${CMAKE_CURRENT_SOURCE_DIR}/demo/run_dll.c)
+target_include_directories(${PROJECT_NAME} PUBLIC 
+											${PROJECT_SOURCE_DIR}/cJSON/inc)
+target_link_libraries(${PROJECT_NAME} PUBLIC 
+cJSON)
+
+message(STATUS "src This is SOURCE dir " ${PROJECT_SOURCE_DIR})
+# 5. link library, include directory
